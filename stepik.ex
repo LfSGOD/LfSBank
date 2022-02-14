@@ -21,7 +21,7 @@ list = [str(input().split())]
 new_list = []
 for x in list:
     x.upper()
-    if list[x] == list[x:len(list) - 1]:
+    if list[x] == list[x:]:
         new_list.append(x)
         len(x) - 1
     else:
