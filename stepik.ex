@@ -17,10 +17,12 @@ bcd 1
 aa 2
 
 #начало кода
-list = input().lower().split()
-new_list = []
-
-for x in list:
-    if x not in new_list:
-        new_list.append(x)
-        print(x, new_list.count(x))
+text = input().lower().split()
+dictionary = dict()
+for word in text:
+    if(word not in dictionary):
+        dictionary[word] = 1
+    else:
+        dictionary[word]+=1
+for word, count in dictionary.items():
+    print(word, count)
