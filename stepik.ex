@@ -17,13 +17,10 @@ bcd 1
 aa 2
 
 #начало кода
-list = [str(input().split())]
+list = input().lower().split()
 new_list = []
+
 for x in list:
-    x.upper()
-    if list[x] == list[x:]:
+    if x not in new_list:
         new_list.append(x)
-        len(x) - 1
-    else:
-        break
-print(*new_list + ' ' + len(x) - 1)
+        print(x, new_list.count(x))
